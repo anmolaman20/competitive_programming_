@@ -10,7 +10,7 @@ int main()
    cout<<"Entered Number was : "<<x<<" that is "<<b<<endl;
    int y = x ^ (1<<i);
    bitset<8U>b1(y);
-   cout<<"Number  after changed ith bit is "<<y<<" that is "<<b1<<endl;
+   cout<<"Number  after changed ith bit is _"<<y<<" that is "<<b1<<endl;
 
 return  0;
 }

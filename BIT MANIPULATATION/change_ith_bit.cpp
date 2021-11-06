@@ -11,6 +11,5 @@ int main()
    int y = x ^ (1<<i);
    bitset<8U>b1(y);
    cout<<"Number  after changed ith bit is _"<<y<<" that is "<<b1<<endl;
-
 return  0;
 }

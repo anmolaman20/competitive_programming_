@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 /*idea of this code is 5 ---> 5&4 ==101 & 100 ==> 100
 now 100 & 011(n-1=4-1=3)  ==> 000  now loop stop ans would be 2;

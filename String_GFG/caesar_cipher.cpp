@@ -1,20 +1,22 @@
 /*
-  
+  it is an earliest and simple technique used for data encryption,it is simply a data substitution techniques 
+ for ex - anmol - 114131512
+ and if shift is given like 2
+ then anmol becomes -> cpoqn .
 */
 #include <bits/stdc++.h>
 using namespace std;
 string encrypt(string str,int shift)
 {
-    string result = "";
+    string res = "";
      for(int i=0;i<str.length();i++)
     { 
-        string result;
         if(isupper(str[i]))
-            result += char(int(str[i]+shift-65)%26 + 65);
+            res = res + char(int(str[i]+shift-65)%26 + 65);
         else 
-            result += char(int(str[i]+shift-97)%26 + 97);
+            res = res + char(int(str[i]+shift-97)%26 + 97);
     } 
-    return result;
+    return res;
 }
 int main()
 {

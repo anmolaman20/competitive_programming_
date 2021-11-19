@@ -1,0 +1,51 @@
+TOPIC - HEAP (PRIORITY QUEUE)
+Author - ANMOL AMAN
+Time - 4:00 pm
+venue - Jiet boys Hostel
+Date - 19-11-2021
+Learning Source - Youtube(Aditya verma)
+
+
+Heap or priority queue -  it stores data in specific order and the order is depend upon its types
+1 -> min Heaps --> the smallest element is always at the top
+2 -> max heaps  --> the largest element is always at the top
+
+push,pop,top three operations are generally performed by this .
+
+
+identifaction of question if k+smallest/largest == max heap/min heap (respectively). 
+
+
+declaration of 
+
+1.max heap   =  priority_queue<int>maxh;  // data structure can be of any type --> ex. float or vector<int> or pair<int,int> etc.
+
+2.min heap   = priority_queue<int,vector<int>,greater<int>>minh;
+
+
+operations are implemented by using dot(.) operator ex -> minh/maxh.push()/.pop()/.top()
+
+after pop or push priority queue again rearrange there elements in order depended upon it type that is if it is 
+min heap the smaller eles get at the top and for max heap largest elements can get at the top;
+
+top just give you the toppest value of that heap and it don't effect on existing priority_queue(heap)
+
+
+generally all question of heap can be solved by using sorting but sorting will take O(nlogn) time although heap 
+is going to take just O(nlogK)  that means it is more efficient than sorting because here we are sorting the 
+specific number of elements which is necessary to be sort.
+
+questions :--
+it is one of the famous topics of interveiwer so be prepared here are some common questions of heap
+
+to solve these questions you will have to atleast an about of working of pair or map or vector functions .
+
+
+1.k smallest/greatest elements 
+2.k closed number to a given number
+3.top k frequent numbers 
+4.frequency sort
+5.k closet point to origin
+6.connected ropes 
+7.sum of elements b/w k1^th smallest/largest or k2^th smallest/largest number.
+and many more questions ..........

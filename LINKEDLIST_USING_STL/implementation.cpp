@@ -1,32 +1,80 @@
 #include <bits/stdc++.h>
 using namespace std;
-bool comp(int first,int second)
+class node
 {
-    return first>second;
+    public:
+        int data;
+        node* next;
+        node(int v)
+        {
+            data = v;
+            next = NULL;
+        }
+};
+void insertAtTail(node* &head,int data)
+{
+    node *n = new node(data);
+    if(head==NULL)
+    {
+        head = n;
+        return;
+    }
+    else 
+    {
+        node* temp = head;
+        while(temp->next != NULL)
+        {
+            temp = temp->next;
+        }
+        temp->next = n;
+    }
+}
+void insertAtBegining(node* &head,int data)
+{
+    node* n = new node(data);
+    if(head==NULL)
+        head = n ;
+    else
+    {
+       n->next = head;
+       head = n; 
+    }
+       
+}
+void insertAtpos(node* &head,int data,int pos)
+{
+    node* n = new node(data);
+     node* temp = head;
+     for(int i=0;i<pos - 1;i++)
+     {
+          temp = temp->next;
+     }
+     n->next = temp->next;
+     temp->next = n;
+}
+void display(node* head)
+{
+    if(head==NULL)
+       cout<<"Linked List is Empty : \n";
+    else 
+    {
+        while(head!=NULL)
+        {
+            cout<<head->data<<"->";
+            head = head->next;
+        }
+        cout<<"NULL\n";
+    }
 }
 int main()
 {
-    list<int> l1,l2,l3;
-    l1 = {1,7,8,5,45,58,74,0};
-    cout<<"front is "<<l1.front()<<endl;
-    cout<<"back is "<<l1.back()<<endl;
-    cout<<"push back five :"<<endl;
-    l1.push_back(54);
-    l1.push_front(88);
-    cout<<"size "<<l1.size()<<endl;
-    // l2 = {3,5,9};
-    // l3 = {2,4,7,8};
-    // l3.merge(l2,comp);
-    // l1.sort();
-    for(auto it = l1.rbegin();it!=l1.rend();++it)  //
-    {
-        cout<<' '<<*it;
-    }
-    // cout<<endl;
-    // for(auto it = l3.begin();it!=l3.end();++it)
-    // {
-    //     cout<<' '<<*it;
-    // }
-
-    return 0;
+   node *head = NULL;
+   insertAtTail(head,1);  //1
+   insertAtTail(head,2);  // 1 2
+   insertAtBegining(head,7);// 7 1 2
+   insertAtBegining(head,9); //9 7 1 2
+   insertAtTail(head,3); //9 7 1 2 3
+   insertAtpos(head,5,3);//9 7 5 1 2 3
+   display(head);   
+return 0;
 }
